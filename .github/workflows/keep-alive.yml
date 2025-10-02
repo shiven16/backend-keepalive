@@ -23,7 +23,7 @@ jobs:
           
           # Perform the ping with retries
           for i in {1..3}; do
-            HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 "$BACKEND_URL")
+            HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 200 "$BACKEND_URL")
             
             if [ "$HTTP_STATUS" -ge 200 ] && [ "$HTTP_STATUS" -lt 300 ]; then
               echo "✅ Backend is alive! HTTP Status: $HTTP_STATUS (attempt $i)"
