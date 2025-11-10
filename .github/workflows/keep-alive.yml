@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  BACKEND_URL: https://studio448.onrender.com/health
+  BACKEND_URL: https://thorough-gerty-studio448-ccae4022.koyeb.app/health
 
 jobs:
   keep-alive:
